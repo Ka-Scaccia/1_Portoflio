@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="description" content="Portfolio Katia Scacciaferro">
+    <title>KS - Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- flickity -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"></script>
+  </head>
+  <body>
+    <!-- video-sfondo -->
+    <div class="video">
+      <video
+        src="./assest/video/sfondo.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+    <main>
+      <!-- header -->
+      <header>
+        <!-- logo -->
+        <h1 style="font-size: 44px">
+          <strong style="text-decoration: underline">S</strong>cacciaferro
+          <strong style="text-decoration: underline"> K</strong>atia
+        </h1>
+        <!-- menu -->
+        <div id="menuToogle">
+          <input type="checkbox" id="menuCheckbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#ChiSono">Chi sono</a></li>
+            <li><a href="#Certificazioni">Certificazioni tech</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Esperienze">Esperienze</a></li>
+            <li><a href="#Contatti">Contatti</a></li>
+            <li><a href="./assest/file/CV.pdf">Visualizza CV</a></li>
+            <li id="logo">KS</li>
+          </ul>
+        </div>
+      </header>
+      <!-- chi sono -->
+      <div class="informazioni" style="max-width: 100vw; height: 100vh">
+        <div class="titles">
+          <h1>Katia Scacciaferro</h1>
+          <h2>Web developer front-end</h2>
+          <br />
+          <a href="#start"
+            ><i class="fa-solid fa-arrow-down" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+      <!-- presentazione -->
+      <!-- CHI SONO -->
+      <div id="start"></div>
+      <div class="ChiSono">
+        <h3 style="color: white;">01 Chi sono</h3>
+        <p style="color: white;">
+          Sono un'appassionata del mondo dell'informatica in particolare dei
+          siti
+          <br />
+          web per il lato front-end e ho una grande voglia di imparare per
+          rimanere <br />
+          sempre aggiornata sulle ultime novità di questo settore.
+        </p>
+      </div>
+      <div class="contenitoreL">
+        <span class="lineaBottom" id="Certificazioni"></span>
+      </div>
+      <!-- CERTIFICAZIONI -->
+      <div class="certificazioni">
+        <h3 style="color: white;">02 Certificazioni tech</h3>
+        <!-- carosello -->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img
+              src="./assest/images/webDevelopment.webp"
+              style="width: 100%"
+              height="100%"
+              alt="certificazione web development"
+            />
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img
+              src="./assest/images/JavaScript.webp"
+              style="width: 100%"
+              height="100%"
+              alt="certificazione javascript"
+            />
+          </div>
+
+          <a
+            class="prev"
+            onclick="plusSlides(-1)"
+            style="left: 0; border-radius: 0 3px 3px 0"
+            >&#10094;</a
+          >
+          <a
+            class="next"
+            onclick="plusSlides(1)"
+            style="right: 0; border-radius: 3px 0 0 3px"
+            >&#10095;</a
+          >
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
+      <div class="contenitoreL">
+        <span class="lineaBottom" id="Portfolio"></span>
+      </div>
+      <!-- PORTFOLIO -->
+      <div class="Portfolio">
+        <h3 style="color: white;">03 Portoflio</h3>
+        <div class="progetti">
+          <div>Work in progress</div>
+          <div>Work in progress</div>
+          <div>Work in progress</div>
+          <div>Work in progress</div>
+          <div>Work in progress</div>
+          <div>Work in progress</div>
+        </div>
+      </div>
+      <!-- ESPERIENZE -->
+      <div class="contenitoreL">
+        <span class="lineaBottom" id="Esperienze"></span>
+      </div>
+      <div class="Esperienze">
+        <h3 style="color: white;">04 Esperienze</h3>
+        <div class="elenco content" style="line-height: 1.5;">
+          <p style="color: white;">
+            Ho lavorato eslucivamente come <strong>web developer</strong> e
+            presso <strong>Dinamo digitale, Colle Val d'Elsa</strong>. Nel
+            <strong> [05/06/2023 - 16/06/2023]</strong> ho acquisito competenze
+            come: JavaScript (le basi e funzioni avanzate), JSON, React (le basi
+            e funzioni avanzate), Strapi e Figma (grafica progettazione e
+            prototipazione). Successivamente nel
+            <strong> [21/06/2023 - 04/09/2023]</strong>, frequentando l'azienda
+            2 volte a settimana e lavorando la mattina, ho acquisito competenze
+            come: librerie React (router, loading-skeleton), React, Strapi e
+            come ultimo stage nel <strong> [11/07/2024 - 08/08/2024]</strong>,
+            con la stessa frequenza e orario, ho acquisito competenze come:
+            JavaScript (localStorage), Tailwind CSS, librerie (eCharts).
+          </p>
+          <img
+            src="./assest/images/fotoDinamo.webp"
+            alt="foto Dinamo"
+            style="width: 80%; height: 80%"
+          />
+        </div>
+      </div>
+      <div class="contenitoreL">
+        <span class="lineaBottom" id="Contatti"></span>
+      </div>
+      <!-- CONTATTI -->
+      <div class="contatti">
+        <h3 style="color: white;">04 Contatti</h3>
+        <form action="">
+          <input type="text" placeholder="Oggetto" id="oggetto" />
+          <br />
+          <input type="text" placeholder="Nome" id="nome" />
+          <br />
+          <input type="text" placeholder="Cognome" id="cognome" />
+          <br />
+          <input type="text" placeholder="Email" id="email" />
+          <br />
+          <textarea
+            placeholder="Messaggio"
+            style="margin-bottom: 20px"
+            id="mess"
+          ></textarea>
+          <br />
+          <input type="submit" value="Invia messaggio" id="ButtonSend" />
+        </form>
+      </div>
+    </main>
+    <!-- footer -->
+    <div class="footer">
+      <h2>Katia Scacciaferro, web developer front-end</h2>
+      <p>junior developer</p>
+      <div class="copyright" style="text-align: center">
+        <p style="color: white; font-size: 16px" class="copy" name="freccia">
+          Copyright© 2025 Katia Scacciaferro
+        </p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/carosello.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,3 +1,27 @@
-window.addEventListener("pagehide",function (){if (socket&&socket.readyState===WebSocket.OPEN){socket.close();}});navigator.sendBeacon(
-  "/log",JSON.stringify({evento:"click",pagina:location.href})
-);document.getElementById("ButtonSend").onclick=function (){let oggettoEl=document.getElementById("Oggetto");let nomeEl=document.getElementById("Nome");let cognomeEl=document.getElementById("Cognome");let emailEl=document.getElementById("Email");let messaggioEl=document.getElementById("Mess");let oggetto=oggettoEl.value;let nome=nomeEl.value;let cognome=cognomeEl.value;let email=emailEl.value;if (!oggetto||!nome||!cognome||!email){alert("Inserire tutti i campi!");e.preventDefault();return false;}const emailRegex=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;if (!emailRegex.test(email)){alert("Inserire un'email valida!");e.preventDefault();return false;}oggettoEl.value="";nomeEl.value="";cognomeEl.value="";emailEl.value="";messaggioEl.value="";};try{const socket=new WebSocket("ws://indirizzo/corretto");socket.onerror=function (e){console.warn("Errore nella connessione WebSocket:",e);};}catch (e){console.error("WebSocket fallito:",e);}
+document.getElementById("ButtonSend").onclick = function (e) {
+  e.preventDefault(); // <-- aggiunto
+  let oggettoEl = document.getElementById("Oggetto");
+  let nomeEl = document.getElementById("Nome");
+  let cognomeEl = document.getElementById("Cognome");
+  let emailEl = document.getElementById("Email");
+  let messaggioEl = document.getElementById("Mess");
+
+  let oggetto = oggettoEl.value.trim();
+  let nome = nomeEl.value.trim();
+  let cognome = cognomeEl.value.trim();
+  let email = emailEl.value.trim();
+
+  if (!oggetto || !nome || !cognome || !email) {
+    alert("Inserire tutti i campi!");
+    return false;
+  }
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailRegex.test(email)) {
+    alert("Inserire un'email valida!");
+    return false;
+  }
+
+  // se tutto è valido, invia il form
+  e.target.closest("form").submit();
+};

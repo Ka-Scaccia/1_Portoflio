@@ -184,19 +184,28 @@
       <!-- CONTATTI -->
       <div class="contatti">
         <h3 style="color: white">04 Contatti</h3>
-        <form netlify>
-          <input type="text" placeholder="Oggetto" id="oggetto" />
+        <!-- form collegato a Netflify -->
+        <form name="contatti" method="POST" netlify>
+          <!-- campo nascosto -->
+          <input type="hidden" name="form-name" value="contatti" />
+          <!-- campi -->
+          <input type="text" placeholder="Oggetto" id="oggetto"
+          name="Oggetto" />
           <br />
-          <input type="text" placeholder="Nome" id="nome" />
+          <input type="text" placeholder="Nome" id="nome"
+          name="Nome" />
           <br />
-          <input type="text" placeholder="Cognome" id="cognome" />
+          <input type="text" placeholder="Cognome" id="cognome"
+          name="Cognome" />
           <br />
-          <input type="text" placeholder="Email" id="email" />
+          <input type="text" placeholder="Email" id="email"
+          name="Email" />
           <br />
           <textarea
             placeholder="Messaggio"
             style="margin-bottom: 20px"
             id="mess"
+            name="Messaggio"
           ></textarea>
           <br />
           <input type="submit" value="Invia messaggio" id="ButtonSend" />
